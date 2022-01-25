@@ -17,14 +17,24 @@ function App() {
     position: 'relative'
 }}>
   <img style={{
-    position: 'relative'
+    position: 'relative',
+    maxWidth: '100%',
+    height: 'auto'
   }} src={fifty_cent} alt="50cent"/>
-  <div style={{position: 'absolute', top: 0, left: 0, transform: 'translate(0%, 0%)'}}>  
+  <div style={{
+    position: 'absolute',
+    transform: 'translate(0%, 0%)',
+    bottom: '70%',
+    right: '20%'
+    }}>  
     <div style={{
       position: 'relative',
     }}
     >
-      <img src={speech_bubble} alt="speech bubble"/>
+      <img src={speech_bubble} alt="speech bubble" style={{
+        maxWidth: '100%',
+        height: 'auto'
+      }}/>
       <code style={{  
         position: 'absolute',
         top: '36%',
