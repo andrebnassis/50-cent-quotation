@@ -9,16 +9,17 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
-<div style={{display: 'flex',   
+<div style={{display: 'flex',
   justifyContent: 'center',
   alignContent: 'center'}}>
 
 <div style={{
-    position: 'relative'
+    position: 'relative',
 }}>
   <img style={{
     position: 'relative',
-    maxWidth: '100%',
+    width: '100%',
+    maxWidth:'424px',
     height: 'auto'
   }} src={fifty_cent} alt="50cent"/>
   <div style={{
