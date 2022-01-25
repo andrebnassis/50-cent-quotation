@@ -9,6 +9,10 @@ import { Box } from '@mui/material';
 
 function App() {
   return (
+<div style={{display: 'flex',   
+  justifyContent: 'center',
+  alignContent: 'center'}}>
+
 <div style={{
     position: 'relative'
 }}>
@@ -31,6 +35,8 @@ function App() {
       </code>
     </div>
   </div>
+</div>
+
 </div>
   );
 }
