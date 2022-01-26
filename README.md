@@ -8,7 +8,7 @@ The goal of this project is to practice some concepts in a React application. Yo
 * handle some CSS
 * Web API Handling: https://docs.awesomeapi.com.br/api-de-moedas
     * GET https://economia.awesomeapi.com.br/last/USD-BRL
-* Local Storage usage
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
