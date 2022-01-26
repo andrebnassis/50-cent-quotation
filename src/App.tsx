@@ -42,7 +42,12 @@ function App() {
         maxWidth: '100%',
         height: 'auto'
       }}/>
-      <Typography sx={{  
+      <Typography  
+      variant='h3'
+      fontFamily={'"VT323", monospace'}
+      letterSpacing={'1px'}
+      whiteSpace={'nowrap'}
+      sx={{  
         position: 'absolute',
         top: '36%',
         left: '50%',
