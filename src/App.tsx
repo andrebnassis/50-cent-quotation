@@ -1,54 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import fifty_cent from './resources/50cent.png'
 import speech_bubble from './resources/speechBubble_crop.png'
-import { Box } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 //https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
 
 function App() {
   return (
-<div style={{display: 'flex',
-  justifyContent: 'center',
-  alignContent: 'center'}}>
+<Stack 
+  flexDirection ='row'
+  justifyContent='center'
+  alignContent='center'>
 
-<div style={{
+<Box sx={{
     position: 'relative',
 }}>
-  <img style={{
+  <Box
+   component="img"
+   sx={{
     position: 'relative',
     width: '100%',
     maxWidth:'424px',
     height: 'auto'
   }} src={fifty_cent} alt="50cent"/>
-  <div style={{
+  <Box sx={{
     position: 'absolute',
     transform: 'translate(0%, 0%)',
     bottom: '70%',
     right: '20%'
     }}>  
-    <div style={{
+    <Box sx={{
       position: 'relative',
     }}
     >
-      <img src={speech_bubble} alt="speech bubble" style={{
+      <Box 
+      component="img" 
+      src={speech_bubble} 
+      alt="speech bubble" 
+      sx={{
         maxWidth: '100%',
         height: 'auto'
       }}/>
-      <code style={{  
+      <Typography sx={{  
         position: 'absolute',
         top: '36%',
         left: '50%',
         transform: 'translate(-50%, -50%)'}}
       >
         R$ 2,75
-      </code>
-    </div>
-  </div>
-</div>
+      </Typography>
+    </Box>
+  </Box>
+</Box>
 
-</div>
+</Stack>
   );
 }
 
