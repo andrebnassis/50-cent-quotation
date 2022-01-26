@@ -3,11 +3,26 @@ import './App.css';
 import fifty_cent from './resources/50cent.png'
 import speech_bubble from './resources/speechBubble_crop.png'
 import { Box, Stack, Typography } from '@mui/material';
+import AppBar from './AppBar';
+import Footer from './Footer';
 
 //https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
 
 function App() {
   return (
+<Box sx={{  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh'}}>
+    <AppBar onChangeLanguage={() => {console.log("onChangeLanguage")}}/>
+<Box sx={{
+      display:'flex',
+      flexDirection: 'column',
+      minHeight: '560px',
+      justifyContent:'center',
+      alignContent:'center'
+}}>
+
+
 <Stack 
   flexDirection ='row'
   justifyContent='center'
@@ -60,6 +75,10 @@ function App() {
 </Box>
 
 </Stack>
+</Box>
+<Footer/>
+
+</Box>
   );
 }
 
