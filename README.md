@@ -7,6 +7,12 @@ The goal of this project is to practice some concepts in a React application. Yo
 * Web API Handling: https://docs.awesomeapi.com.br/api-de-moedas
     * GET https://economia.awesomeapi.com.br/last/USD-BRL
 
+## Published version
+
+This project is published at: [https://andrebnassis.github.io/50-cent-quotation/](https://andrebnassis.github.io/50-cent-quotation/)
+
+reference: [https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
