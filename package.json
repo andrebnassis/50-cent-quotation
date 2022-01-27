@@ -2,6 +2,7 @@
   "name": "50-cent-quotation",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://andrebnassis.github.io/50-cent-quotation",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -28,7 +29,9 @@
     "eject": "react-scripts eject",
     "mock-api:start": "docker-compose -f mock-api/docker-compose.yaml up -d",
     "mock-api:stop": "docker-compose -f mock-api/docker-compose.yaml down -v",
-    "dev": "run-s mock-api:start start"
+    "dev": "run-s mock-api:start start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "npm-run-all": "^4.1.5"
   }
 }
