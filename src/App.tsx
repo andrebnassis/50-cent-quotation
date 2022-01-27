@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import './App.css';
 import fifty_cent from './resources/50cent.png'
 import speech_bubble from './resources/speechBubble_crop.png'
@@ -14,18 +14,19 @@ const App = () => {
 
   const [quotation, setQuotation] = React.useState<number|undefined|null>(undefined);
 
-  useEffect(() => {
-
-    const dollarQuotation = getDollarQuotationRawData("BRL");
-
-    dollarQuotation.then((res:any) => {
-      console.log({res});
-      if(isNumber(res as number)){
-        console.log("is number");
-        setQuotation(res)
-      }
-      }).catch(() => setQuotation(null));
+  const fetchMyAPI = useCallback(async () => {
+    try{
+      let response = await getDollarQuotationRawData('BRL')
+       setQuotation(response as number);
+    }
+    catch(err){
+      setQuotation(null)
+    }
   }, [])
+
+  useEffect(() => {
+    fetchMyAPI()
+  }, [fetchMyAPI])
 
   return (
 <Box sx={{  display: 'flex',

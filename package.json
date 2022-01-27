@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "mock-api:start": "docker-compose -f mock-api/docker-compose.yaml up -d",
     "mock-api:stop": "docker-compose -f mock-api/docker-compose.yaml down -v",
-    "dev": "run-p start mock-api:start"
+    "dev": "run-s mock-api:start start"
   },
   "eslintConfig": {
     "extends": [
