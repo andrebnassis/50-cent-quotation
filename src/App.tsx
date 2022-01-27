@@ -18,7 +18,13 @@ const App = () => {
 
     const dollarQuotation = getDollarQuotationRawData("BRL");
 
-    dollarQuotation.then((res:any) => setQuotation(res)).catch(() => setQuotation(null));
+    dollarQuotation.then((res:any) => {
+      console.log({res});
+      if(isNumber(res as number)){
+        console.log("is number");
+        setQuotation(res)
+      }
+      }).catch(() => setQuotation(null));
   }, [])
 
   return (
