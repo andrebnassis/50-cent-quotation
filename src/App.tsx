@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import fifty_cent from './resources/50cent.png'
 import speech_bubble from './resources/speechBubble_crop.png'
 import { Box, Stack, Typography } from '@mui/material';
 import AppBar from './AppBar';
 import Footer from './Footer';
+import { getDollarQuotationRawData } from './services/quotationAPIHandler';
+import { isNumber, toCurrencyFormat } from './services/numberUtils';
 
 //https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
 
-function App() {
+const App = () => {
+
+  const [quotation, setQuotation] = React.useState<number|undefined|null>(undefined);
+
+  useEffect(() => {
+
+    const dollarQuotation = getDollarQuotationRawData("BRL");
+
+    dollarQuotation.then((res:any) => setQuotation(res)).catch(() => setQuotation(null));
+  }, [])
+
   return (
 <Box sx={{  display: 'flex',
   flexDirection: 'column',
@@ -68,7 +80,7 @@ function App() {
         left: '50%',
         transform: 'translate(-50%, -50%)'}}
       >
-        R$ 2,75
+        {isNumber(quotation as number) ? toCurrencyFormat((quotation as number)/2) : quotation === undefined ? "Wait..." : "Error :("}
       </Typography>
     </Box>
   </Box>
