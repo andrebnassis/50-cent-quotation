@@ -2,8 +2,6 @@
 
 The goal of this project is to practice some concepts in a React application. You can find here:
 
-* Solution for Browser Language Detector that works on Chrome and Safari (at least)
-* i18next for translation
 * Material UI components 
 * handle some CSS
 * Web API Handling: https://docs.awesomeapi.com.br/api-de-moedas

@@ -8,8 +8,6 @@ import Footer from './Footer';
 import { getDollarQuotationRawData } from './services/quotationAPIHandler';
 import { isNumber, toCurrencyFormat } from './services/numberUtils';
 
-//https://stackoverflow.com/questions/48474/how-do-i-position-one-image-on-top-of-another-in-html
-
 const App = () => {
 
   const [quotation, setQuotation] = React.useState<number|undefined|null>(undefined);
@@ -32,7 +30,7 @@ const App = () => {
 <Box sx={{  display: 'flex',
   flexDirection: 'column',
   minHeight: '100vh'}}>
-    <AppBar onChangeLanguage={() => {console.log("onChangeLanguage")}}/>
+    <AppBar />
 <Box sx={{
       display:'flex',
       flexDirection: 'column',
