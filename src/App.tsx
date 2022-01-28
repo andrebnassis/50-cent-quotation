@@ -6,7 +6,10 @@ import { Box, Stack, Typography } from '@mui/material';
 import AppBar from './AppBar';
 import Footer from './Footer';
 import { getDollarQuotationRawData } from './services/quotationAPIHandler';
+import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from 'react-share';
 import { isNumber, toCurrencyFormat } from './services/numberUtils';
+
+const sharedUrl = 'https://andrebnassis.github.io/50-cent-quotation/';
 
 const App = () => {
 
@@ -92,6 +95,29 @@ const App = () => {
 </Box>
 
 </Stack>
+<Box sx={{display:'flex', flexDirection:'column', alignItems:'center', margin: '0 10px 0 10px'}}>
+          <Box sx={{display:'flex', "& button":{margin: '5px'}}}>
+            <FacebookShareButton url={sharedUrl} quote={toCurrencyFormat((quotation as number)/2)} hashtag='#50CentQuotation' windowHeight={window.innerHeight*0.9}>
+              <FacebookIcon
+                size={28}
+                round={false}
+              />
+            </FacebookShareButton>
+            <TwitterShareButton url={sharedUrl} title={toCurrencyFormat((quotation as number)/2)} hashtags={['50CentQuotation']}  windowHeight={window.innerHeight*0.9}>
+              <TwitterIcon
+                size={28}
+                round={false}
+              />
+            </TwitterShareButton>
+            <WhatsappShareButton url={sharedUrl} title={toCurrencyFormat((quotation as number)/2)}  windowHeight={window.innerHeight*0.9}>
+              <WhatsappIcon
+                size={28}
+                round={false}
+              />
+            </WhatsappShareButton>
+          </Box>
+</Box>
+
 </Box>
 <Footer/>
 
