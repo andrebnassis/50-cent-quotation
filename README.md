@@ -6,6 +6,7 @@ The goal of this project is to practice some concepts in a React application. Yo
 * handle some CSS
 * Web API Handling: https://docs.awesomeapi.com.br/api-de-moedas
     * GET https://economia.awesomeapi.com.br/last/USD-BRL
+* Env Variable Usage
 * Generated favicon and thumbnails with: https://favicon.io/favicon-converter/
 ## Published version
 
