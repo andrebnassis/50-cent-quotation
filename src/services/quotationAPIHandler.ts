@@ -6,9 +6,7 @@ const getClient = (): AxiosInstance => {
     const ax = axios.create();
     ax.interceptors.request.use(async (config) => {
         const customConfig = config;
-        customConfig.baseURL = `https://economia.awesomeapi.com.br`;
-        // customConfig.baseURL = `http://localhost:9000`;
-        console.log(process.env.REACT_APP_QUOTATION_BASE_URL)
+        customConfig.baseURL = process.env.REACT_APP_QUOTATION_BASE_URL;
         return customConfig;
     });
 
